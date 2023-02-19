@@ -21,12 +21,11 @@ if conn.connected == True:
 filter=etree.XML('<system><services/></system>')
 filter1='<system><services/></system>'
 
-jconf_native_var = conn.rpc.get_config()
+jconf_srv_var = conn.rpc.get_config(filter_xml=filter1, options={'format': 'set'})
 
-
-jconf_native_fo = open('../data/conf_native', 'w')
-print (etree.tostring(jconf_native_var, encoding='unicode', pretty_print=True), file=jconf_native_fo)
-jconf_native_fo.close()
+jconf_srv_fo = open('../data/conf_srv', 'w')
+print (etree.tostring(jconf_srv_var, encoding='unicode', pretty_print=True), file=jconf_srv_fo)
+jconf_srv_fo.close()
 
 
 conn.close()
