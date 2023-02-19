@@ -1,9 +1,9 @@
 
-SETUP PyEZ: 
+#SETUP PyEZ: 
 
-INSTALL PYTHON3 / PIP3 PACKAGES
-apt-get install python3-pip
-pip3 install junos-eznc
+##INSTALL PYTHON3 / PIP3 PACKAGES
+###apt-get install python3-pip
+###pip3 install junos-eznc
 
 
 SET HOSTNAME AND CREATE USERS
