@@ -1,0 +1,5 @@
+<configuration-set>
+set system services ssh
+set system services netconf ssh
+</configuration-set>
+

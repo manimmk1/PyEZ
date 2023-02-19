@@ -1,0 +1,26 @@
+<configuration-set>
+set version 18.2R1.9
+set system login class operator-local permissions interface
+set system login class operator-local permissions shell
+set system login class operator-local permissions view-configuration
+set system login class read-only-local permissions view-configuration
+set system login user auto uid 2000
+set system login user auto class super-user
+set system login user auto authentication encrypted-password "$6$/4C/eAI.$BbOMaPjMNEIKZlyhSM5iwZyfl16iHk7xm0BvkXqWloLS/BiWUlpJPxGtzLnFSbILU36d.evLA0iu44kkVnxPh."
+set system root-authentication encrypted-password "$6$WV8G.ZhN$rjAkx0g4xo8eN4SNfslgyV/IRAtThwN.POU19Iwlr9nCMM32EPS7b7rHEQG8daS2gC8YIf74p5KVGjT8Yjsms1"
+set system host-name vMX
+set system services ssh
+set system services netconf ssh
+set system syslog user * any emergency
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system syslog file interactive-commands interactive-commands any
+set system processes dhcp-service traceoptions file dhcp_logfile
+set system processes dhcp-service traceoptions file size 10m
+set system processes dhcp-service traceoptions level all
+set system processes dhcp-service traceoptions flag packet
+set chassis fpc 0 lite-mode
+set interfaces ge-0/0/1 unit 0 family inet address 192.168.122.2/24
+set interfaces fxp0 unit 0 family inet dhcp vendor-id Juniper-vmx-VM63DCE827DB
+</configuration-set>
+

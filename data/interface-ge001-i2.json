@@ -1,0 +1,203 @@
+{
+  "interface-information": [
+    {
+      "logical-interface": [
+        {
+          "name": [
+            {
+              "data": "ge-0/0/1.0"
+            }
+          ],
+          "local-index": [
+            {
+              "data": "332"
+            }
+          ],
+          "snmp-index": [
+            {
+              "data": "536"
+            }
+          ],
+          "if-config-flags": [
+            {
+              "iff-up": [
+                {
+                  "data": [
+                    null
+                  ]
+                }
+              ],
+              "iff-snmp-traps": [
+                {
+                  "data": [
+                    null
+                  ]
+                }
+              ],
+              "internal-flags": [
+                {
+                  "data": "0x4004000"
+                }
+              ]
+            }
+          ],
+          "encapsulation": [
+            {
+              "data": "ENET2"
+            }
+          ],
+          "policer-overhead": [
+            {}
+          ],
+          "traffic-statistics": [
+            {
+              "attributes": {
+                "junos:style": "brief"
+              },
+              "input-packets": [
+                {
+                  "data": "3192"
+                }
+              ],
+              "output-packets": [
+                {
+                  "data": "7493"
+                }
+              ]
+            }
+          ],
+          "filter-information": [
+            {}
+          ],
+          "address-family": [
+            {
+              "address-family-name": [
+                {
+                  "data": "inet"
+                }
+              ],
+              "mtu": [
+                {
+                  "data": "1500"
+                }
+              ],
+              "max-local-cache": [
+                {
+                  "data": "75000"
+                }
+              ],
+              "new-hold-limit": [
+                {
+                  "data": "75000"
+                }
+              ],
+              "intf-curr-cnt": [
+                {
+                  "data": "1"
+                }
+              ],
+              "intf-unresolved-cnt": [
+                {
+                  "data": "0"
+                }
+              ],
+              "intf-dropcnt": [
+                {
+                  "data": "0"
+                }
+              ],
+              "address-family-flags": [
+                {
+                  "ifff-sendbcast-pkt-to-re": [
+                    {
+                      "data": [
+                        null
+                      ]
+                    }
+                  ],
+                  "internal-flags": [
+                    {
+                      "data": "0x0"
+                    }
+                  ]
+                }
+              ],
+              "interface-address": [
+                {
+                  "ifa-flags": [
+                    {
+                      "ifaf-current-default": [
+                        {
+                          "data": [
+                            null
+                          ]
+                        }
+                      ],
+                      "ifaf-current-preferred": [
+                        {
+                          "data": [
+                            null
+                          ]
+                        }
+                      ],
+                      "ifaf-current-primary": [
+                        {
+                          "data": [
+                            null
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "ifa-destination": [
+                    {
+                      "data": "192.168.122/24"
+                    }
+                  ],
+                  "ifa-local": [
+                    {
+                      "data": "192.168.122.2"
+                    }
+                  ],
+                  "ifa-broadcast": [
+                    {
+                      "data": "192.168.122.255"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "address-family-name": [
+                {
+                  "data": "multiservice"
+                }
+              ],
+              "mtu": [
+                {
+                  "data": "Unlimited"
+                }
+              ],
+              "address-family-flags": [
+                {
+                  "ifff-is-primary": [
+                    {
+                      "data": [
+                        null
+                      ]
+                    }
+                  ],
+                  "internal-flags": [
+                    {
+                      "data": "0x0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
