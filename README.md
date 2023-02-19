@@ -1,12 +1,13 @@
 
-## SETUP PyEZ: 
+### SETUP PyEZ: 
 
-### INSTALL PYTHON3 / PIP3 PACKAGES
+
+#### INSTALL PYTHON3 / PIP3 PACKAGES
 ###### apt-get install python3-pip
 ###### pip3 install junos-eznc
 
 
-### SET HOSTNAME AND CREATE USERS
+#### SET HOSTNAME AND CREATE USERS
 ###### set system host-name vMX
 ###### set system login user auto uid 2000
 ###### set system login user auto class operator
@@ -14,11 +15,11 @@
 ###### set system root-authentication plain-text-password
 
   
-### ENABLE SSH & NETCONF
+#### ENABLE SSH & NETCONF
 ###### set system services ssh
 ###### set system services netconf ssh
 
   
-### IMPORT REQUIRED MODULES 
+#### IMPORT REQUIRED MODULES 
 ###### from jnpr.junos import Device
 
