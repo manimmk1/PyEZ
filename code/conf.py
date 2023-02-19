@@ -12,7 +12,7 @@ print ('Program to get config from junos')
 juser = input ('Enter username: ')
 jpass = getpass('Enter password: ')
 
-conn = Device(host='192.168.122.2', user=juser, password=jpass)
+conn = Device(host='x.x.x.x', user=juser, password=jpass)
 conn.open()
 
 if conn.connected == True: 

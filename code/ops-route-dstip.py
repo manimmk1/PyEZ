@@ -1,5 +1,5 @@
 """
-Program to connect to Juniper router and get show version details
+Program to connect to Juniper router and get show route details
 """
 
 from jnpr.junos import Device
@@ -16,15 +16,13 @@ connection = Device(host='x.x.x.x', user=juser, password=jpasswd)
 connection.open()
 print ('connection status is : ', connection.connected)
 
-version = connection.rpc.get_software_information({'format': 'json'})
+route_dst = connection.rpc.get_route_information({'format': 'json'}, destination='x.x.x.x')
 
-with open ('../data/version.json', 'w') as wf:
- json.dump(version, wf)
+with open ('../data/route-dst.json', 'w') as wf:
+ json.dump(route_dst, wf)
 
-with open ('../data/version-i2.json', 'w') as wf:
- json.dump(version, wf, indent=2)
-
-print ("Junos version is: ", version['software-information'][0]['junos-version'][0]['data'])
+with open ('../data/route-dst-i2.json', 'w') as wf:
+ json.dump(route_dst, wf, indent=2)
 
 connection.close()
 print ('connection status is : ', connection.connected)
