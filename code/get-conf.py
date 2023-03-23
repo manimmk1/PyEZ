@@ -13,24 +13,27 @@ juser = input ('Enter username: ')
 jpass = getpass('Enter password: ')
 
 conn = Device(host='x.x.x.x', user=juser, password=jpass)
-conn.open()
 
-if conn.connected == True: 
- print ('Connection established') 
+try: 
+ conn.open()
 
-filter=etree.XML('<system><services/></system>')
-filter1='<system><services/></system>'
+except: 
+ print('connection to junos cannot be established')
 
-jconf_native_var = conn.rpc.get_config()
+else:
+ if conn.connected == True: 
+  print ('Connection established') 
 
+ filter=etree.XML('<system><services/></system>')
+ filter1='<system><services/></system>'
 
-jconf_native_fo = open('../data/conf_native', 'w')
-print (etree.tostring(jconf_native_var, encoding='unicode', pretty_print=True), file=jconf_native_fo)
-jconf_native_fo.close()
+ jconf_native_var = conn.rpc.get_config()
 
+ jconf_native_fo = open('../data/conf_native', 'w')
+ print (etree.tostring(jconf_native_var, encoding='unicode', pretty_print=True), file=jconf_native_fo)
+ jconf_native_fo.close()
 
-conn.close()
-
-if (conn.connected == False): 
- print ('connection closed')
+ conn.close()
+ if (conn.connected == False): 
+  print ('connection closed')
 
